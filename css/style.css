@@ -6,6 +6,10 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+:root{
+    --white-color:#fff;
+    --primary-color:#777;
+}
 
 *{
     margin: 0;
@@ -18,8 +22,12 @@ body{
     font-weight: 400px;
     font-size: 1rem;
     line-height: 1.7rem;
-    color: #777;
+    color: var(--primary-color);
     padding: 2rem;
+}
+
+a{
+    text-decoration: none;
 }
 
 .header{
@@ -49,7 +57,7 @@ body{
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: #fff;
+    color: var(--white-color);
     text-align: center;
 }
 
@@ -69,8 +77,60 @@ body{
     font-size: 1.8rem;
     word-spacing: 1rem;
     letter-spacing: 0.8rem;
-    animation: moveInRight 1s ease-in;
+    animation: moveInRight 1s backwards ease-in 1s;
     backface-visibility: hidden;
+}
+
+.btn{
+    margin-top: 5rem;
+    padding: 0.8rem 3rem;
+    border-radius: 100px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    word-spacing: 0.2rem;
+    position: relative;
+}
+
+.btn-white{
+    display: inline-block;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active{
+    transform: translate(-1px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-animation-bottom{
+    animation: moveInBottom 1s ease-in-out 1.5s backwards;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.6s;
+}
+
+.btn-white::after{
+    background-color: var(--white-color);
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
 
 @keyframes moveInLeft {
@@ -99,5 +159,16 @@ body{
     100%{
         opacity: 1;
         transform: translate(0px) rotate(0deg);
+    }
+}
+
+@keyframes moveInBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px);
     }
 }
