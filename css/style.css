@@ -6,3 +6,66 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400px;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color: #777;
+    padding: 2rem;
+}
+
+.header{
+    height: 95vh;
+    position: relative;
+    background: 
+    linear-gradient(
+        to right bottom,
+        #7ed56fc4,
+        #28b485c9),
+    url('../img/hero.jpg') no-repeat top center/cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box{
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+}
+
+#logo{
+    height: 2.5rem;
+}
+
+.header-content{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+}
+
+.header-main-content, .header-sub-content{
+    text-transform: uppercase;
+}
+
+.header-main-content{
+    letter-spacing: 2rem;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.header-sub-content{
+    font-size: 1.8rem;
+    word-spacing: 1rem;
+    letter-spacing: 0.8rem;
+}
+
