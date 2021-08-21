@@ -61,11 +61,43 @@ body{
     letter-spacing: 2rem;
     font-size: 3.5rem;
     margin-bottom: 2rem;
+    animation: moveInLeft 1s ease-in;
+    backface-visibility: hidden;
 }
 
 .header-sub-content{
     font-size: 1.8rem;
     word-spacing: 1rem;
     letter-spacing: 0.8rem;
+    animation: moveInRight 1s ease-in;
+    backface-visibility: hidden;
 }
 
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translate(-100px) rotate(-50deg);
+    }
+    80%{
+        transform: translate(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px) rotate(0deg);
+    }
+}
+
+
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translate(100px) rotate(50deg);
+    }
+    80%{
+        transform: translate(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px) rotate(0deg);
+    }
+}
