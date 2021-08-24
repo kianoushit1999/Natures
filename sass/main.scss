@@ -1,124 +1,122 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
-$primary-color : #55c57a;
-$light-primary-color : #55c57a;
-$dark-primary-color : #28b485;
+$primary-color: #55c57a;
+$light-primary-color: #55c57a;
+$dark-primary-color: #28b485;
 $light-color: #fff;
 $dark-color: #777;
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@mixin makeUpperCase {
+  text-transform: uppercase;
 }
 
-html{
-    font-size: 16px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Lato', sans-serif;
-    font-weight: 25rem;
-    font-size: 1rem;
-    line-height: 1.7rem;
-    color: var(--primary-color);
-    padding: 2rem;
+html {
+  font-size: 16px;
 }
 
-a{
-    text-decoration: none;
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 25rem;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  color: var(--primary-color);
+  padding: 2rem;
 }
 
-.header{
-    height: 95vh;
-    position: relative;
-    background: 
-    linear-gradient(
-        to right bottom,
-        rgba($light-primary-color, 0.8),
-        rgba($dark-primary-color, 0.8)),
-    url('../img/hero.jpg') no-repeat top center/cover;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+a {
+  text-decoration: none;
 }
 
-.header__logo-box{
+.header {
+  height: 95vh;
+  position: relative;
+  background: linear-gradient(
+      to right bottom,
+      rgba($light-primary-color, 0.8),
+      rgba($dark-primary-color, 0.8)
+    ),
+    url("../img/hero.jpg") no-repeat top center/cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
     position: absolute;
     top: 2.5rem;
     left: 2.5rem;
-}
+  }
 
-#logo{
-    height: 2.5rem;
-}
-
-.header__content{
+  &__content {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: $light-color;
     text-align: center;
-}
+  }
 
-.header--main-content, .header--sub-content{
-    text-transform: uppercase;
-}
-
-.header--main-content{
+  &--main-content {
     letter-spacing: 2rem;
     font-size: 3.5rem;
     margin-bottom: 2rem;
     animation: moveInLeft 1s ease-in;
     backface-visibility: hidden;
-}
+    @include makeUpperCase();
+  }
 
-.header--sub-content{
+  &--sub-content {
     font-size: 1.8rem;
     word-spacing: 1rem;
     letter-spacing: 0.8rem;
     animation: moveInRight 1s backwards ease-in 1s;
     backface-visibility: hidden;
+    @include makeUpperCase();
+  }
 }
 
-.btn{
-    margin-top: 5rem;
-    padding: 0.8rem 3rem;
-    border-radius: 6.25rem;
-    transition: all 0.3s;
-    text-transform: uppercase;
-    word-spacing: 0.2rem;
-    position: relative;
+#logo {
+  height: 2.5rem;
 }
 
-.btn--white{
+.btn {
+  margin-top: 5rem;
+  padding: 0.8rem 3rem;
+  border-radius: 6.25rem;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  word-spacing: 0.2rem;
+  position: relative;
+
+  &--white {
     display: inline-block;
     color: $dark-color;
     background-color: $light-color;
-}
+    &::after {
+      background-color: $light-color;
+    }
+  }
 
-.btn:hover{
+  &:hover {
     transform: translateY(-3px);
     box-shadow: 0px 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
-}
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
-.btn:active{
+  &:active {
     transform: translate(-1px);
     box-shadow: 0px 0.313rem 0.625rem rgba(0, 0, 0, 0.2);
-}
+  }
 
-.btn--animation-bottom{
+  &--animation-bottom {
     animation: moveInBottom 1s ease-in-out 1.5s backwards;
-}
+  }
 
-.btn::after{
+  &::after {
     content: "";
     display: inline-block;
     width: 100%;
@@ -129,53 +127,44 @@ a{
     top: 0;
     left: 0;
     transition: all 0.6s;
-}
-
-.btn--white::after{
-    background-color: $light-color;
-}
-
-.btn:hover::after{
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
+  }
 }
 
 @keyframes moveInLeft {
-    0%{
-        opacity: 0;
-        transform: translate(-6.25rem) rotate(-50deg);
-    }
-    80%{
-        transform: translate(0.625rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0px) rotate(0deg);
-    }
+  0% {
+    opacity: 0;
+    transform: translate(-6.25rem) rotate(-50deg);
+  }
+  80% {
+    transform: translate(0.625rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px) rotate(0deg);
+  }
 }
 
-
 @keyframes moveInRight {
-    0%{
-        opacity: 0;
-        transform: translate(6.25rem) rotate(50deg);
-    }
-    80%{
-        transform: translate(-0.625rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0px) rotate(0deg);
-    }
+  0% {
+    opacity: 0;
+    transform: translate(6.25rem) rotate(50deg);
+  }
+  80% {
+    transform: translate(-0.625rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px) rotate(0deg);
+  }
 }
 
 @keyframes moveInBottom {
-    0%{
-        opacity: 0;
-        transform: translateY(1.875rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(1.875rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
 }
