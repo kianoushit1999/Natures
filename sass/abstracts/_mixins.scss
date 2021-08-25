@@ -7,3 +7,8 @@
   transform: skewX(2deg) skewY(3deg) scale(1.1);
   text-shadow: 0 0.5rem 1rem rgba($dark-color, 0.25);
 }
+
+@mixin grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

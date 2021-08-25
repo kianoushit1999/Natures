@@ -13,7 +13,7 @@ body {
 
 .about {
   &__header {
-    font-size: $h-font;
+    font-size: $h1-font;
     background: linear-gradient(
       to right,
       $light-primary-color 0%,
@@ -27,9 +27,21 @@ body {
     -webkit-background-clip: text;
     @include makeUpperCase();
     transition: all 0.4s ease-in;
-    
     &:hover {
       @include header_effect;
     }
+  }
+
+  &__content{
+    @include grid-2-col;
+    text-align: left;
+  }
+}
+
+.paragraph{
+  font-size: medium;
+
+  &:not(:last-child){
+    margin-bottom: 2rem;
   }
 }

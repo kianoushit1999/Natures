@@ -47,4 +47,18 @@
       transition: all 0.6s;
     }
   }
-  
+
+.text-btn-light{
+  display: inline-block;
+  padding: 0.3rem;
+  border-bottom: 1px solid $primary-color;
+  color: $primary-color;
+  transition: all 0.2s;
+  font-size: $btn-medium;
+  font-weight: bold;
+
+  &:hover{
+    background-color: $primary-color;
+    color: $light-color
+  }
+}
