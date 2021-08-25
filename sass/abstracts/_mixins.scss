@@ -1,3 +1,9 @@
 @mixin makeUpperCase {
-    text-transform: uppercase;
+  text-transform: uppercase;
+  word-spacing: 0.5rem;
+}
+
+@mixin header_effect {
+  transform: skewX(2deg) skewY(3deg) scale(1.1);
+  text-shadow: 0 0.5rem 1rem rgba($dark-color, 0.25);
 }

@@ -1,3 +1,31 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-6.25rem) rotate(-50deg); }
+  80% {
+    transform: translate(0.625rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0px) rotate(0deg); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(6.25rem) rotate(50deg); }
+  80% {
+    transform: translate(-0.625rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0px) rotate(0deg); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(1.875rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0px); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -6,50 +34,34 @@
 html {
   font-size: 16px; }
 
+a {
+  text-decoration: none; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 25rem;
   font-size: 1rem;
   line-height: 1.7rem;
-  color: var(--primary-color);
+  color: #777;
   padding: 2rem; }
-
-a {
-  text-decoration: none; }
-
-.header {
-  height: 95vh;
-  position: relative;
-  background: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") no-repeat top center/cover;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 2.5rem;
-    left: 2.5rem; }
-  .header__content {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center; }
-  .header--main-content {
-    letter-spacing: 2rem;
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-    animation: moveInLeft 1s ease-in;
-    backface-visibility: hidden;
-    text-transform: uppercase; }
-  .header--sub-content {
-    font-size: 1.8rem;
-    word-spacing: 1rem;
-    letter-spacing: 0.8rem;
-    animation: moveInRight 1s backwards ease-in 1s;
-    backface-visibility: hidden;
-    text-transform: uppercase; }
 
 #logo {
   height: 2.5rem; }
+
+.about__header {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #55c57a 0%, #55c57a 40%, #28b485 100%);
+  display: inline-block;
+  color: transparent;
+  line-height: 50px;
+  padding: 1rem 0;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  word-spacing: 0.5rem;
+  transition: all 0.4s ease-in; }
+  .about__header:hover {
+    transform: skewX(2deg) skewY(3deg) scale(1.1);
+    text-shadow: 0 0.5rem 1rem rgba(119, 119, 119, 0.25); }
 
 .btn {
   margin-top: 5rem;
@@ -88,30 +100,42 @@ a {
     left: 0;
     transition: all 0.6s; }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translate(-6.25rem) rotate(-50deg); }
-  80% {
-    transform: translate(0.625rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0px) rotate(0deg); } }
+.header {
+  height: 95vh;
+  position: relative;
+  background: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") no-repeat top center/cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem; }
+  .header__content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center; }
+  .header--main-content {
+    letter-spacing: 2rem;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    animation: moveInLeft 1s ease-in;
+    backface-visibility: hidden;
+    text-transform: uppercase;
+    word-spacing: 0.5rem; }
+  .header--sub-content {
+    font-size: 1.8rem;
+    word-spacing: 1rem;
+    letter-spacing: 0.8rem;
+    animation: moveInRight 1s backwards ease-in 1s;
+    backface-visibility: hidden;
+    text-transform: uppercase;
+    word-spacing: 0.5rem; }
 
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translate(6.25rem) rotate(50deg); }
-  80% {
-    transform: translate(-0.625rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0px) rotate(0deg); } }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(1.875rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0px); } }
+.about {
+  background-color: #f7f7f7;
+  text-align: center;
+  margin: auto 0;
+  padding: 18rem 0rem;
+  margin-top: -20vh; }
