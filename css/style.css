@@ -67,6 +67,30 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: left; }
+  .about__content--text {
+    padding: 0 1rem; }
+  .about__content--imges {
+    position: relative; }
+    .about__content--imges [class^="img-"] {
+      position: absolute;
+      width: 55%;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.5);
+      transition: all 2s ease-in-out;
+      outline-offset: 1rem; }
+    .about__content--imges .img-1 {
+      top: -2rem;
+      left: 2rem; }
+    .about__content--imges .img-2 {
+      right: 0; }
+    .about__content--imges .img-3 {
+      left: 20%;
+      top: 5rem; }
+    .about__content--imges [class^="img-"]:hover {
+      transform: scale(1.1);
+      z-index: 10;
+      box-shadow: 0 1rem 2rem rgba(119, 119, 119, 0.5);
+      outline: 0.5rem solid #55c57a; }
 
 .paragraph {
   font-size: medium; }
