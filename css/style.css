@@ -66,6 +66,7 @@ body {
 .about__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 0rem 3rem;
   text-align: left; }
   .about__content--text {
     padding: 0 1rem; }
@@ -196,4 +197,5 @@ body {
   text-align: center;
   margin: auto 0;
   padding: 18rem 0rem;
-  margin-top: -20vh; }
+  margin-top: -20vh;
+  padding-bottom: 30rem; }

@@ -11,4 +11,5 @@
 @mixin grid-2-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 0rem 3rem;
 }
