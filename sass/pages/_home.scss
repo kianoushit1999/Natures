@@ -1,8 +1,22 @@
-.about{
-    background-color: $light-grey-color;
-    text-align: center;
-    margin: auto 0;
-    padding: 18rem 0rem;
-    margin-top: -20vh;
-    padding-bottom: 30rem;
+.about {
+  background-color: $light-grey-color;
+  text-align: center;
+  margin: auto 0;
+  padding: 18rem 0rem;
+  margin-top: -20vh;
+  padding-bottom: 30rem;
+}
+
+.features {
+  background: linear-gradient(
+      to right bottom,
+      rgba($light-primary-color, 0.8),
+      rgba($dark-primary-color, 0.8)
+    ),
+    url("../../img/nat-4.jpg") no-repeat top center/cover;
+  margin-top: -12rem;
+  transform: skewY(-5deg);
+  & > * {
+    transform: skewY(5deg);
+  }
 }

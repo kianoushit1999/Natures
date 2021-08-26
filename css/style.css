@@ -37,6 +37,9 @@ html {
 a {
   text-decoration: none; }
 
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 25rem;
@@ -99,7 +102,16 @@ body {
     margin-bottom: 2rem; }
 
 .m-lr-8 {
-  margin: 0 8rem; }
+  margin: 0rem 8rem; }
+
+.m-lr-2 {
+  margin: 0rem 1rem; }
+
+.m-tb-8 {
+  margin: 8rem 0rem; }
+
+.m-tb-12 {
+  margin: 12rem 0rem; }
 
 .m-b-4 {
   margin-bottom: 4rem; }
@@ -109,6 +121,9 @@ body {
 
 .m-b-1 {
   margin-bottom: 1rem; }
+
+.txt-center {
+  text-align: center; }
 
 .btn {
   margin-top: 5rem;
@@ -159,6 +174,25 @@ body {
     background-color: #55c57a;
     color: #fff; }
 
+.features__boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0rem 8rem; }
+  .features__boxes [class^="feature__boxes--box"] {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 3rem 0;
+    border-radius: 0.2rem;
+    transition: transform 0.5s; }
+    .features__boxes [class^="feature__boxes--box"] > i {
+      display: block;
+      background: linear-gradient(to right bottom, rgba(85, 197, 122, 0.2), rgba(40, 180, 133, 0.8));
+      color: transparent;
+      -webkit-background-clip: text;
+      font-size: 3.5rem;
+      margin-bottom: 1rem; }
+  .features__boxes [class^="feature__boxes--box"]:hover {
+    transform: translateY(-1rem) scale(1.05); }
+
 .header {
   height: 95vh;
   position: relative;
@@ -199,3 +233,10 @@ body {
   padding: 18rem 0rem;
   margin-top: -20vh;
   padding-bottom: 30rem; }
+
+.features {
+  background: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/nat-4.jpg") no-repeat top center/cover;
+  margin-top: -12rem;
+  transform: skewY(-5deg); }
+  .features > * {
+    transform: skewY(5deg); }
