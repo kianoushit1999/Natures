@@ -20,3 +20,24 @@
     transform: skewY(5deg);
   }
 }
+
+.tour{
+  background-color: $light-grey-color;
+  text-align: center;
+  margin: auto 0;
+  padding: 18rem 0rem;
+  margin-top: -10rem;
+
+  &__header{
+    @include header-section;
+
+    &:hover{
+      @include header_effect;
+    }
+  }
+
+  &__footer{
+    margin: auto 5rem;
+  }
+
+}

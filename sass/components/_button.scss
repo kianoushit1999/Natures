@@ -15,6 +15,15 @@
         background-color: $light-color;
       }
     }
+
+    &--primary {
+      display: inline-block;
+      color: $light-color;
+      background-color: $primary-color;
+      &::after {
+        background-color: $light-primary-color;
+      }
+    }
   
     &:hover {
       transform: translateY(-3px);

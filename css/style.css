@@ -37,7 +37,14 @@ html {
 a {
   text-decoration: none; }
 
-h1, h2, h3, h4, h5, h6 {
+ul {
+  list-style: none; }
+
+h1 {
+  text-transform: uppercase;
+  word-spacing: 0.5rem; }
+
+h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
 
 body {
@@ -59,8 +66,6 @@ body {
   line-height: 50px;
   padding: 1rem 0;
   -webkit-background-clip: text;
-  text-transform: uppercase;
-  word-spacing: 0.5rem;
   transition: all 0.4s ease-in; }
   .about__header:hover {
     transform: skewX(2deg) skewY(3deg) scale(1.1);
@@ -101,6 +106,9 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 2rem; }
 
+.m-lr-12 {
+  margin: 0rem 12rem; }
+
 .m-lr-8 {
   margin: 0rem 8rem; }
 
@@ -139,6 +147,12 @@ body {
     background-color: #fff; }
     .btn--white::after {
       background-color: #fff; }
+  .btn--primary {
+    display: inline-block;
+    color: #fff;
+    background-color: #55c57a; }
+    .btn--primary::after {
+      background-color: #55c57a; }
   .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0px 0.625rem 1.25rem rgba(0, 0, 0, 0.2); }
@@ -193,6 +207,99 @@ body {
   .features__boxes [class^="feature__boxes--box"]:hover {
     transform: translateY(-1rem) scale(1.05); }
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0rem 8rem; }
+  .cards__card {
+    height: 35rem;
+    position: relative;
+    perspective: 150rem; }
+    .cards__card__face {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      transition: transform 0.8s ease;
+      box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.15);
+      border-radius: 3px;
+      overflow: hidden; }
+    .cards__card__front {
+      transform: rotateY(0deg);
+      position: relative; }
+    .cards__card__back {
+      transform: rotateY(180deg);
+      color: #fff; }
+      .cards__card__back--1 {
+        background: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .cards__card__back--2 {
+        background: linear-gradient(to right bottom, #55c57a, #28b485); }
+      .cards__card__back--3 {
+        background: linear-gradient(to right bottom, #2998ff, #5643fa); }
+    .cards__card:hover .cards__card__front {
+      transform: rotateY(-180deg); }
+    .cards__card:hover .cards__card__back {
+      transform: rotateY(0deg); }
+
+.card--image {
+  height: 15rem;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+  .card--image--1 {
+    background: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg") no-repeat center center/cover; }
+  .card--image--2 {
+    background: linear-gradient(to right bottom, #55c57a, #28b485), url("../img/nat-6.jpg") no-repeat center center/cover; }
+  .card--image--3 {
+    background: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-7.jpg") no-repeat center center/cover; }
+
+.card--header {
+  position: absolute;
+  top: 11rem;
+  right: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.8rem;
+  width: 45%;
+  line-height: 2rem; }
+  .card--header--effect {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0.2rem 0.5rem; }
+    .card--header--effect--1 {
+      background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+    .card--header--effect--2 {
+      background: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)); }
+    .card--header--effect--3 {
+      background: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+
+.card--list {
+  padding: 2rem 4rem; }
+  .card--list--item {
+    padding: 0.5rem 0rem; }
+  .card--list--item:not(:last-child) {
+    border-bottom: 2px solid #eee; }
+
+.card__info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .card__info--price--header {
+    padding: 0.8rem; }
+  .card__info--price--1 {
+    font-size: 5rem;
+    padding: 2rem; }
+  .card__info--price--2 {
+    font-size: 5rem;
+    padding: 2rem; }
+  .card__info--price--3 {
+    font-size: 5rem;
+    padding: 2rem; }
+
 .header {
   height: 95vh;
   position: relative;
@@ -240,3 +347,23 @@ body {
   transform: skewY(-5deg); }
   .features > * {
     transform: skewY(5deg); }
+
+.tour {
+  background-color: #f7f7f7;
+  text-align: center;
+  margin: auto 0;
+  padding: 18rem 0rem;
+  margin-top: -10rem; }
+  .tour__header {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #55c57a 0%, #55c57a 40%, #28b485 100%);
+    display: inline-block;
+    color: transparent;
+    line-height: 50px;
+    padding: 1rem 0;
+    -webkit-background-clip: text; }
+    .tour__header:hover {
+      transform: skewX(2deg) skewY(3deg) scale(1.1);
+      text-shadow: 0 0.5rem 1rem rgba(119, 119, 119, 0.25); }
+  .tour__footer {
+    margin: auto 5rem; }
