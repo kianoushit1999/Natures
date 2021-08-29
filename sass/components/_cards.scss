@@ -1,0 +1,144 @@
+.cards{
+    @include grid-3-col;
+    &__card{
+        height: 35rem;
+        position: relative;
+        perspective: 150rem;
+
+        &__face{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            transition: transform 0.8s ease;
+            box-shadow: 0 1.5rem 4rem rgba($dark-color, 0.15);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        &__front{
+            transform: rotateY(0deg);
+            position: relative;
+        }
+
+        &__back{
+            transform: rotateY(180deg);
+            color: $light-color;
+
+            &--1{
+                background: linear-gradient(to right bottom, $light-secondary-color, $dark-secondary-color);
+            }
+
+            &--2{
+                background: linear-gradient(to right bottom, $light-primary-color, $dark-primary-color);
+            }
+
+            &--3{
+                background: linear-gradient(to right bottom, $light-tertiary-color, $dark-tertiary-color);
+            }
+
+        }
+
+        &:hover &__front{
+            transform: rotateY(-180deg);
+        }
+
+        &:hover &__back{
+            transform: rotateY(0deg);
+        }
+    }
+}
+
+.card{
+    &--image{
+        height: 15rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1{
+            background: linear-gradient(to right bottom, $light-secondary-color, $dark-secondary-color)
+            ,url("../img/nat-5.jpg") no-repeat center center/cover;
+        }
+
+        &--2{
+            background: linear-gradient(to right bottom, $light-primary-color, $dark-primary-color),
+            url("../img/nat-6.jpg") no-repeat center center/cover;
+        } 
+
+        &--3{
+            background: linear-gradient(to right bottom, $light-tertiary-color, $dark-tertiary-color),
+            url("../img/nat-7.jpg") no-repeat center center/cover;
+
+        } 
+    }
+
+    &--header{
+        position: absolute;
+        top: 11rem;
+        right: 1.5rem;
+        text-transform: uppercase;
+        color: $light-color;
+        font-size: 1.8rem;
+        width: 45%;
+        line-height: 2rem;
+
+        &--effect{
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            padding: 0.2rem 0.5rem;
+
+            &--1{
+                background: linear-gradient(to right bottom, rgba($light-secondary-color, 0.8), rgba($dark-secondary-color, 0.8));
+            }
+            &--2{
+                background: linear-gradient(to right bottom, rgba($light-primary-color, 0.8), rgba($dark-primary-color, 0.8));
+            }
+            &--3{
+                background: linear-gradient(to right bottom, rgba($light-tertiary-color, 0.8), rgba($dark-tertiary-color, 0.8));
+            }
+        }
+    }
+
+    &--list{
+        padding: 2rem 4rem;
+
+        &--item{
+            padding: 0.5rem 0rem;
+        }
+
+        &--item:not(:last-child){
+            border-bottom: 2px solid $grey-color;
+        }
+    }
+
+    &__info{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        &--price{
+
+            &--header{
+                padding: 0.8rem;
+            }
+            
+            &--1{
+                font-size: 5rem;
+                padding: 2rem;
+            }
+            &--2{
+                font-size: 5rem;
+                padding: 2rem;
+            }
+            &--3{
+                font-size: 5rem;
+                padding: 2rem;
+            }
+        }
+    }
+}

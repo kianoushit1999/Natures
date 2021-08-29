@@ -1,0 +1,28 @@
+.features__boxes{
+    @include grid-4-col;
+
+    [class^="feature__boxes--box"]{
+        background: rgba($light-color, 0.6);
+        padding: 3rem 0;
+        border-radius: 0.2rem;
+        transition: transform 0.5s;
+
+        & > i{
+            display: block;
+            background: linear-gradient(
+                to right bottom,
+                rgba($light-primary-color, 0.2),
+                rgba($dark-primary-color, 0.8)
+            );
+            color: transparent;
+            -webkit-background-clip: text;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    [class^="feature__boxes--box"]:hover{
+        transform: translateY(-1rem) scale(1.05);
+    }
+
+}
