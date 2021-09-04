@@ -149,7 +149,8 @@ body {
   transition: all 0.3s;
   text-transform: uppercase;
   word-spacing: 0.2rem;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .btn--white {
     display: inline-block;
     color: #777;
