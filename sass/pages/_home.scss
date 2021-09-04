@@ -54,3 +54,18 @@
     z-index: 10;
   }
 }
+
+.contact-us{
+  background: linear-gradient(to right bottom, $light-primary-color, $dark-primary-color);
+  padding: 4rem 8rem;
+
+  &__bg-photo{
+    background: url('/img/nat-10.jpg') no-repeat center center/cover;
+    box-shadow: 0 1.5rem 3.5rem rgba($dark-color, 0.8);
+
+    &--light-mask{
+      padding:0rem 3rem 8rem;
+      background: linear-gradient(120deg, rgba($light-color,0.9) 0%, rgba($light-color, 0.9) 50%, transparent 50%);
+    }
+  }
+}
