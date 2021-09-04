@@ -127,6 +127,9 @@ body {
 .m-tb-4 {
   margin: 8rem 0rem; }
 
+.m-tb-2 {
+  margin: 2rem 0rem; }
+
 .m-t-4 {
   margin-top: 4rem; }
 
@@ -441,6 +444,55 @@ body {
     backface-visibility: hidden;
     text-transform: uppercase;
     word-spacing: 0.5rem; }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__content {
+    width: 60%;
+    height: 60%;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.25);
+    background: #fff;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.5s 0.2s; }
+    .popup__content__items--images {
+      width: 30%;
+      display: flex;
+      flex-direction: column; }
+      .popup__content__items--images [class^="popup__content__items--images--"] {
+        height: 50%;
+        object-fit: cover; }
+    .popup__content__items--text {
+      width: 70%;
+      padding: 2rem 3rem; }
+      .popup__content__items--text a {
+        margin-top: 1.5rem; }
+
+.icon__close {
+  text-align: right;
+  font-size: 2.5rem; }
+  .icon__close a {
+    color: #777; }
+  .icon__close :hover {
+    color: #55c57a;
+    cursor: pointer; }
 
 .about {
   background-color: #f7f7f7;
