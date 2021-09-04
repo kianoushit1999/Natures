@@ -21,32 +21,32 @@
   }
 }
 
-.tour{
+.tour {
   background-color: $light-grey-color;
   text-align: center;
   margin: auto 0;
   padding: 18rem 0rem;
   margin-top: -10rem;
 
-  &__header{
+  &__header {
     @include header-section;
 
-    &:hover{
+    &:hover {
       @include header_effect;
     }
   }
 
-  &__footer{
+  &__footer {
     margin: auto 5rem;
   }
 }
 
-.story{
+.story {
   text-align: center;
   margin: auto 0;
   position: relative;
 
-  &__content{
+  &__content {
     z-index: 100;
     height: 100%;
     margin: 0 auto;
@@ -55,17 +55,74 @@
   }
 }
 
-.contact-us{
-  background: linear-gradient(to right bottom, $light-primary-color, $dark-primary-color);
+.contact-us {
+  background: linear-gradient(
+    to right bottom,
+    $light-primary-color,
+    $dark-primary-color
+  );
   padding: 4rem 8rem;
 
-  &__bg-photo{
-    background: url('/img/nat-10.jpg') no-repeat center center/cover;
+  &__bg-photo {
+    background: url("/img/nat-10.jpg") no-repeat center center/cover;
     box-shadow: 0 1.5rem 3.5rem rgba($dark-color, 0.8);
 
-    &--light-mask{
-      padding:0rem 3rem 8rem;
-      background: linear-gradient(120deg, rgba($light-color,0.9) 0%, rgba($light-color, 0.9) 50%, transparent 50%);
+    &--light-mask {
+      padding: 0rem 3rem 8rem;
+      background: linear-gradient(
+        120deg,
+        rgba($light-color, 0.9) 0%,
+        rgba($light-color, 0.9) 50%,
+        transparent 50%
+      );
+    }
+  }
+}
+
+.footer {
+  background-color: $light-black;
+  padding: 4rem 8rem;
+  text-align: center;
+  color: $light-color;
+
+  &__info {
+    @include grid-2-col;
+
+    &__links {
+      &__items {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        &--item {
+          margin-top: 1.5rem;
+          padding: 0.5rem 0.8rem;
+          border-top: 2px solid $light-color;
+          a {
+            display: inline-block;
+            color: $light-color;
+            transition: all 0.3s;
+          }
+
+          a:hover {
+            transform: rotate(8deg) scale(1.3);
+            color: rgba($dark-primary-color, 0.8);
+          }
+        }
+      }
+    }
+
+    &--copyrights {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid $light-color;
+      & h1 {
+        color: rgba($dark-primary-color, 0.8);
+        padding: 1rem;
+      
+      
+      }
     }
   }
 }

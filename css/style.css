@@ -497,3 +497,36 @@ body {
     .contact-us__bg-photo--light-mask {
       padding: 0rem 3rem 8rem;
       background: linear-gradient(120deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%); }
+
+.footer {
+  background-color: #333;
+  padding: 4rem 8rem;
+  text-align: center;
+  color: #fff; }
+  .footer__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0rem 3rem; }
+    .footer__info__links__items {
+      display: flex;
+      text-align: center;
+      justify-content: center; }
+      .footer__info__links__items--item {
+        margin-top: 1.5rem;
+        padding: 0.5rem 0.8rem;
+        border-top: 2px solid #fff; }
+        .footer__info__links__items--item a {
+          display: inline-block;
+          color: #fff;
+          transition: all 0.3s; }
+        .footer__info__links__items--item a:hover {
+          transform: rotate(8deg) scale(1.3);
+          color: rgba(40, 180, 133, 0.8); }
+    .footer__info--copyrights {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #fff; }
+      .footer__info--copyrights h1 {
+        color: rgba(40, 180, 133, 0.8);
+        padding: 1rem; }
