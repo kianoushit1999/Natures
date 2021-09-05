@@ -46,8 +46,23 @@
             &--text{
                 width: 70%;
                 padding: 2rem 3rem;
+                
+                &--header{
+                    @include header-section;
+                    &:hover{
+                        @include header_effect;
+                    }
+                }
+
                 a{
                     margin-top: 1.5rem;
+                }
+
+                div[class="text"]{
+                    columns: 2;
+                    column-gap: 3rem;
+                    column-rule: 3px solid $light-grey-color;
+                    hyphens: auto;
                 }
             }
 

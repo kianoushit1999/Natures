@@ -482,15 +482,31 @@ body {
     .popup__content__items--text {
       width: 70%;
       padding: 2rem 3rem; }
+      .popup__content__items--text--header {
+        font-size: 2.5rem;
+        background: linear-gradient(to right, #55c57a 0%, #55c57a 40%, #28b485 100%);
+        display: inline-block;
+        color: transparent;
+        line-height: 50px;
+        padding: 1rem 0;
+        -webkit-background-clip: text; }
+        .popup__content__items--text--header:hover {
+          transform: skewX(2deg) skewY(3deg) scale(1.1);
+          text-shadow: 0 0.5rem 1rem rgba(119, 119, 119, 0.25); }
       .popup__content__items--text a {
         margin-top: 1.5rem; }
+      .popup__content__items--text div[class="text"] {
+        columns: 2;
+        column-gap: 3rem;
+        column-rule: 3px solid #f7f7f7;
+        hyphens: auto; }
 
 .icon__close {
   text-align: right;
   font-size: 2.5rem; }
   .icon__close a {
     color: #777; }
-  .icon__close :hover {
+  .icon__close a:hover {
     color: #55c57a;
     cursor: pointer; }
 
